@@ -25,14 +25,12 @@
                 <Popup x:Name="PART_Popup" AllowsTransparency="True" Grid.ColumnSpan="2" IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}" Margin="1" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" Placement="Bottom">
                     <Themes:SystemDropShadowChrome x:Name="Shdw" Color="Transparent" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding ActualWidth, ElementName=MainGrid}">
                         <Border x:Name="DropDownBorder" BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" BorderThickness="1" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
-                            <ScrollViewer x:Name="DropDownScrollViewer">
-                                <Grid RenderOptions.ClearTypeHint="Enabled">
-                                    <Canvas HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0">
-                                        <Rectangle x:Name="OpaqueRect" Fill="{Binding Background, ElementName=DropDownBorder}" Height="{Binding ActualHeight, ElementName=DropDownBorder}" Width="{Binding ActualWidth, ElementName=DropDownBorder}"/>
-                                    </Canvas>
-                                    <ListBox x:Name="lstBox" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" KeyboardNavigation.DirectionalNavigation="Contained" SelectionMode="Extended" ItemsSource="{TemplateBinding ItemsSource}"/>
-                                </Grid>
-                            </ScrollViewer>
+                            <Grid RenderOptions.ClearTypeHint="Enabled">
+                                <Canvas HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0">
+                                    <Rectangle x:Name="OpaqueRect" Fill="{Binding Background, ElementName=DropDownBorder}" Height="{Binding ActualHeight, ElementName=DropDownBorder}" Width="{Binding ActualWidth, ElementName=DropDownBorder}"/>
+                                </Canvas>
+                                <ListBox x:Name="lstBox" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" KeyboardNavigation.DirectionalNavigation="Contained" SelectionMode="Extended" ItemsSource="{TemplateBinding ItemsSource}"/>
+                            </Grid>
                         </Border>
                     </Themes:SystemDropShadowChrome>
                 </Popup>
@@ -106,10 +104,6 @@
                     </MultiTrigger.Conditions>
                     <Setter Property="ScrollViewer.CanContentScroll" Value="False"/>
                 </MultiTrigger>
-                <Trigger Property="CanContentScroll" SourceName="DropDownScrollViewer" Value="False">
-                    <Setter Property="Canvas.Top" TargetName="OpaqueRect" Value="{Binding VerticalOffset, ElementName=DropDownScrollViewer}"/>
-                    <Setter Property="Canvas.Left" TargetName="OpaqueRect" Value="{Binding HorizontalOffset, ElementName=DropDownScrollViewer}"/>
-                </Trigger>
             </ControlTemplate.Triggers>
         </ControlTemplate>
     </Application.Resources>
