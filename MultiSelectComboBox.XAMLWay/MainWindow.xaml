@@ -14,8 +14,8 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Multi-Select ComboBox in XAML way" Grid.ColumnSpan="2" FontSize="24" />
         <TextBlock Text="Normal ComboBox" Grid.Row="1" />
-        <ComboBox Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Countries}" SelectedItem="{Binding SelectedCountries, Mode=TwoWay}"></ComboBox>
+        <ComboBox Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Countries}" SelectedItem="{Binding SelectedCountries, Mode=TwoWay}" Width="300"></ComboBox>
         <TextBlock Text="Multi-Select ComboBox" Grid.Row="2" />
-        <ComboBox Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Cities}" SelectedItem="{Binding SelectedCity, Mode=TwoWay}" Template="{DynamicResource MultiSelectComboBoxStyle}"></ComboBox>
+        <ComboBox Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Cities}" SelectedItem="{Binding SelectedCity, Mode=TwoWay}" Template="{DynamicResource MultiSelectComboBoxStyle}" Width="300"></ComboBox>
     </Grid>
 </Window>
