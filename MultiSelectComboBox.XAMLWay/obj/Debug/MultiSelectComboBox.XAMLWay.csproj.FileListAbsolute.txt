@@ -1,0 +1,14 @@
+D:\Test Projects\AngularJSSample\MultiSelectComboBox.XAMLWay\MultiSelectComboBox.XAMLWay\bin\Debug\MultiSelectComboBox.XAMLWay.exe.config
+D:\Test Projects\AngularJSSample\MultiSelectComboBox.XAMLWay\MultiSelectComboBox.XAMLWay\bin\Debug\MultiSelectComboBox.XAMLWay.exe
+D:\Test Projects\AngularJSSample\MultiSelectComboBox.XAMLWay\MultiSelectComboBox.XAMLWay\bin\Debug\MultiSelectComboBox.XAMLWay.pdb
+D:\Test Projects\AngularJSSample\MultiSelectComboBox.XAMLWay\MultiSelectComboBox.XAMLWay\obj\Debug\MainWindow.baml
+D:\Test Projects\AngularJSSample\MultiSelectComboBox.XAMLWay\MultiSelectComboBox.XAMLWay\obj\Debug\MainWindow.g.cs
+D:\Test Projects\AngularJSSample\MultiSelectComboBox.XAMLWay\MultiSelectComboBox.XAMLWay\obj\Debug\App.g.cs
+D:\Test Projects\AngularJSSample\MultiSelectComboBox.XAMLWay\MultiSelectComboBox.XAMLWay\obj\Debug\MultiSelectComboBox.XAMLWay_MarkupCompile.cache
+D:\Test Projects\AngularJSSample\MultiSelectComboBox.XAMLWay\MultiSelectComboBox.XAMLWay\obj\Debug\MultiSelectComboBox.XAMLWay.g.resources
+D:\Test Projects\AngularJSSample\MultiSelectComboBox.XAMLWay\MultiSelectComboBox.XAMLWay\obj\Debug\MultiSelectComboBox.XAMLWay.Properties.Resources.resources
+D:\Test Projects\AngularJSSample\MultiSelectComboBox.XAMLWay\MultiSelectComboBox.XAMLWay\obj\Debug\MultiSelectComboBox.XAMLWay.csproj.GenerateResource.Cache
+D:\Test Projects\AngularJSSample\MultiSelectComboBox.XAMLWay\MultiSelectComboBox.XAMLWay\obj\Debug\MultiSelectComboBox.XAMLWay.exe
+D:\Test Projects\AngularJSSample\MultiSelectComboBox.XAMLWay\MultiSelectComboBox.XAMLWay\obj\Debug\MultiSelectComboBox.XAMLWay.pdb
+D:\Test Projects\AngularJSSample\MultiSelectComboBox.XAMLWay\MultiSelectComboBox.XAMLWay\obj\Debug\App.baml
+D:\Test Projects\AngularJSSample\MultiSelectComboBox.XAMLWay\MultiSelectComboBox.XAMLWay\obj\Debug\MultiSelectComboBox.XAMLWay.csprojResolveAssemblyReference.cache
