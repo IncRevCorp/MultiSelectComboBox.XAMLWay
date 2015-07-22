@@ -16,6 +16,6 @@
         <TextBlock Text="Normal ComboBox" Grid.Row="1" />
         <ComboBox Grid.Column="1" Grid.Row="1" ItemsSource="{Binding Countries}" SelectedItem="{Binding SelectedCountries, Mode=TwoWay}"></ComboBox>
         <TextBlock Text="Multi-Select ComboBox" Grid.Row="2" />
-        <ComboBox Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Cities}" SelectedItem="{Binding SelectedCity, Mode=TwoWay}"></ComboBox>
+        <ComboBox Grid.Column="1" Grid.Row="2" ItemsSource="{Binding Cities}" SelectedItem="{Binding SelectedCity, Mode=TwoWay}" Template="{DynamicResource MultiSelectComboBoxStyle}"></ComboBox>
     </Grid>
 </Window>
