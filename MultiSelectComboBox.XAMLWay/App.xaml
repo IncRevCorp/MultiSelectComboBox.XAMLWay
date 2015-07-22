@@ -23,16 +23,14 @@
                     <ColumnDefinition MinWidth="{DynamicResource {x:Static SystemParameters.VerticalScrollBarWidthKey}}" Width="0"/>
                 </Grid.ColumnDefinitions>
                 <Popup x:Name="PART_Popup" AllowsTransparency="True" Grid.ColumnSpan="2" IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}" Margin="1" PopupAnimation="{DynamicResource {x:Static SystemParameters.ComboBoxPopupAnimationKey}}" Placement="Bottom">
-                    <Themes:SystemDropShadowChrome x:Name="Shdw" Color="Transparent" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding ActualWidth, ElementName=MainGrid}">
-                        <Border x:Name="DropDownBorder" BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" BorderThickness="1" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
-                            <Grid RenderOptions.ClearTypeHint="Enabled">
-                                <Canvas HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0">
-                                    <Rectangle x:Name="OpaqueRect" Fill="{Binding Background, ElementName=DropDownBorder}" Height="{Binding ActualHeight, ElementName=DropDownBorder}" Width="{Binding ActualWidth, ElementName=DropDownBorder}"/>
-                                </Canvas>
-                                <ListBox x:Name="lstBox" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" KeyboardNavigation.DirectionalNavigation="Contained" SelectionMode="Extended" ItemsSource="{TemplateBinding ItemsSource}"/>
-                            </Grid>
-                        </Border>
-                    </Themes:SystemDropShadowChrome>
+                    <Border x:Name="DropDownBorder" BorderBrush="{DynamicResource {x:Static SystemColors.WindowFrameBrushKey}}" BorderThickness="1" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" MaxHeight="{TemplateBinding MaxDropDownHeight}" MinWidth="{Binding ActualWidth, ElementName=MainGrid}">
+                        <Grid RenderOptions.ClearTypeHint="Enabled">
+                            <Canvas HorizontalAlignment="Left" Height="0" VerticalAlignment="Top" Width="0">
+                                <Rectangle x:Name="OpaqueRect" Fill="{Binding Background, ElementName=DropDownBorder}" Height="{Binding ActualHeight, ElementName=DropDownBorder}" Width="{Binding ActualWidth, ElementName=DropDownBorder}"/>
+                            </Canvas>
+                            <ListBox x:Name="lstBox" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" KeyboardNavigation.DirectionalNavigation="Contained" SelectionMode="Extended" ItemsSource="{TemplateBinding ItemsSource}"/>
+                        </Grid>
+                    </Border>
                 </Popup>
                 <ToggleButton BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" Grid.ColumnSpan="2" IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
                     <ToggleButton.Style>
@@ -64,7 +62,7 @@
                         </Style>
                     </ToggleButton.Style>
                 </ToggleButton>
-                <ItemsControl IsHitTestVisible="false" ItemsSource="{Binding Path=SelectedItems, ElementName=lstBox}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                <ItemsControl IsHitTestVisible="false" ItemsSource="{Binding Path=SelectedItems, ElementName=lstBox}" Margin="5 0" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel IsItemsHost="True" Orientation="Horizontal" VerticalAlignment="Center"/>
@@ -86,10 +84,6 @@
                 </ItemsControl>
             </Grid>
             <ControlTemplate.Triggers>
-                <Trigger Property="HasDropShadow" SourceName="PART_Popup" Value="True">
-                    <Setter Property="Margin" TargetName="Shdw" Value="0,0,5,5"/>
-                    <Setter Property="Color" TargetName="Shdw" Value="#71000000"/>
-                </Trigger>
                 <Trigger Property="HasItems" Value="False">
                     <Setter Property="Height" TargetName="DropDownBorder" Value="95"/>
                 </Trigger>
