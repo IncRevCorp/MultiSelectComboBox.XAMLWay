@@ -72,6 +72,19 @@
                             <StackPanel IsItemsHost="True" Orientation="Horizontal" VerticalAlignment="Center"/>
                         </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock x:Name="commaTextBlock" Text=", " Margin="0 5"/>
+                                <TextBlock Text="{Binding}" Margin="0 5"/>
+                            </StackPanel>
+                            <DataTemplate.Triggers>
+                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource PreviousData}}" Value="{x:Null}">
+                                    <Setter Property="Visibility" TargetName="commaTextBlock" Value="Collapsed"/>
+                                </DataTrigger>
+                            </DataTemplate.Triggers>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
                 </ItemsControl>
             </Grid>
             <ControlTemplate.Triggers>
